@@ -1,0 +1,11 @@
+# GitHub Linguist Configuration
+# Mark certain directories to exclude from language stats and collapse in GitHub UI
+
+# Documentation and process notes
+docs/archive/* linguist-documentation
+
+# Reference implementations (if committed in future)
+examples/* linguist-documentation
+
+# Generated results (if committed for reproducibility)
+results/* linguist-generated
