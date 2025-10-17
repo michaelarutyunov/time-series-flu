@@ -210,3 +210,29 @@ plan.md
 
 # Custom
 examples/
+
+# Project-specific ignores
+# Generated data
+data/flu_daily_clean.pkl
+
+# Generated results (keep key figures for documentation)
+results/forecasts/*.parquet
+results/optimization/
+
+# Figures - ignore intermediate plots, keep final summary figures
+results/figures/forecast_*.png
+results/figures/coverage_calibration.png
+results/figures/mase_comparison.png
+results/figures/overall_rankings.png
+
+# Windows metadata
+*.Zone.Identifier
+
+# Temporary test files
+test_*.py
+
+# Process documentation (archived)
+docs/archive/
+
+# Template/unused files
+main.py

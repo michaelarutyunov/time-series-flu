@@ -1,7 +1,69 @@
 [project]
 name = "time-series-flu"
 version = "0.1.0"
-description = "Add your description here"
+description = "Time-series forecasting benchmark: Foundation models vs statistical baselines on NHS flu surveillance data"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+authors = [
+    {name = "Mikhail Arutyunov"}
+]
+dependencies = [
+    # Core data science
+    "pandas>=2.1.0,<3.0.0",
+    "numpy>=1.26.0,<2.0.0",
+    "scipy>=1.16.0,<2.0.0",
+
+    # Visualization
+    "matplotlib>=3.10.0,<4.0.0",
+    "seaborn>=0.13.0,<1.0.0",
+
+    # Statistical models
+    "statsmodels>=0.14.0,<1.0.0",
+    "statsforecast>=2.0.0,<3.0.0",
+
+    # Machine learning
+    "lightgbm>=4.0.0,<5.0.0",
+    "optuna>=4.5.0,<5.0.0",
+
+    # Foundation models (time series)
+    "chronos-forecasting>=1.5.0,<2.0.0",
+    "tabpfn-client>=0.1.10,<1.0.0",
+    "tabpfn-time-series>=1.0.0,<2.0.0",
+    "autogluon.timeseries>=1.4.0,<2.0.0",
+
+    # Deep learning (CPU-only)
+    "torch>=2.7.0,<3.0.0",
+
+    # Utilities
+    "python-dotenv>=1.0.0,<2.0.0",
+    "tqdm>=4.67.0,<5.0.0",
+    "ruptures>=1.1.0,<2.0.0",  # Change point detection (used in examples)
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "notebook>=7.0.0",
+    "ipykernel>=6.29.0",
+    "ipywidgets>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# This is a notebook-based analysis project, not a Python package
+# Specify empty packages to prevent build errors
+packages = []
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.0.0",
+    "notebook>=7.0.0",
+    "ipykernel>=6.29.0",
+]
+
+[tool.uv.workspace]
+# This is a standalone project, not a workspace
+members = []

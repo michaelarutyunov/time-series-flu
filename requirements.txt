@@ -1,0 +1,39 @@
+# Time-Series Forecasting Benchmark - NHS Flu Data
+# Python 3.12+
+# Generated for pip compatibility (use `uv` for faster installs)
+
+# Core data science
+pandas>=2.1.0,<3.0.0
+numpy>=1.26.0,<2.0.0
+scipy>=1.16.0,<2.0.0
+
+# Visualization
+matplotlib>=3.10.0,<4.0.0
+seaborn>=0.13.0,<1.0.0
+
+# Statistical models
+statsmodels>=0.14.0,<1.0.0
+statsforecast>=2.0.0,<3.0.0
+
+# Machine learning
+lightgbm>=4.0.0,<5.0.0
+optuna>=4.5.0,<5.0.0
+
+# Foundation models (time series)
+chronos-forecasting>=1.5.0,<2.0.0
+tabpfn-client>=0.1.10,<1.0.0
+tabpfn-time-series>=1.0.0,<2.0.0
+autogluon.timeseries>=1.4.0,<2.0.0
+
+# Deep learning (CPU-only)
+torch>=2.7.0,<3.0.0
+
+# Utilities
+python-dotenv>=1.0.0,<2.0.0
+tqdm>=4.67.0,<5.0.0
+ruptures>=1.1.0,<2.0.0
+
+# Jupyter environment (optional - see requirements-dev.txt)
+# jupyter>=1.0.0
+# notebook>=7.0.0
+# ipykernel>=6.29.0
